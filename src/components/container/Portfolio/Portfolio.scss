@@ -1,0 +1,176 @@
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 350px){
+    }
+    button {
+            color: #000;
+            background: #fff;
+            padding: 0.65rem 1rem;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            text-transform: capitalize;
+            cursor: pointer;
+            border: none;
+            margin-top: 1rem;
+            font-family: "Poppins";
+            
+    
+            &.active {
+                background: #00FF33;
+                color: #fff;
+            }
+        }
+    }
+    .workImages {
+        margin-top: 5rem;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 1rem;
+        @media screen and (max-width: 800px) {
+            grid-template-columns: repeat(2,1fr);
+        }
+        
+        @media screen and (max-width: 600px) {
+            grid-template-columns: 1fr;
+        }
+        
+        .workImage {
+            max-width: 480px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 2%;
+            overflow: hidden;
+            position: relative;
+            @media screen and (max-width:600px) {
+                max-width: 350px;
+            }
+            
+            .workFront {
+                background: none;
+                
+            }
+            .workBack {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: white;
+                opacity: 0.5;
+                z-index: -10;
+
+                img {
+                    object-fit: contain;
+                    width: 100%;
+                    height: 100%;
+                    opacity: .1;
+                }
+            }
+            .workBack:hover {
+                opacity: 1;
+            }
+            
+            .hoverImg {
+                width: 100%;
+                height: 200px;
+                background-position: top;
+                background-size: cover;
+                background-repeat: no-repeat;
+                transition: ease-in-out 6s;
+            }
+            
+
+            a {
+                text-decoration: none;
+                background: #00FF33;
+                padding: 10px;
+                color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                border-radius: 5%;
+                svg {
+                    color: #fff;
+                    font-size: 1.5rem;
+                }
+            } 
+            .hoverLayer{
+                padding: 18px 20px;
+            }
+            .flexDisplay{
+                display: flex;
+                padding: 10px 0;
+            gap: 1.5rem;
+            justify-content: space-between;
+            align-items: center;
+            }
+            
+        }
+
+        .workImage:hover {
+            .hoverImg{
+                background-position: bottom;
+            }
+            .workBack {
+                opacity: 0.6;
+                transition: ease-in-out 0.3s;
+            }
+        }
+}
+
+
+.talk {
+    margin-top: 3rem;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 5px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    .talk_left{
+
+        h3 {
+            font-size: 1.5rem;
+
+            span {
+                font-size: 3.5rem;
+                color: #00FF33;
+
+                @media screen and (max-width: 599px) {
+                    font-size: 2rem;
+                }
+
+                @media screen and (max-width: 360px) {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+    .talk_right {
+        align-self: flex-end;
+        margin-bottom: 1.5rem;
+        background: #00FF33;
+        padding: 0.65rem 1rem;
+        border-radius: 10px;
+        font-size: 0.85rem;
+         
+        a {
+            text-decoration: none;
+            color: #fff;
+            text-transform: capitalize;
+        }
+    }
+    #blog{
+        margin-top: 50px;
+        color: #fff;
+    }
+}
